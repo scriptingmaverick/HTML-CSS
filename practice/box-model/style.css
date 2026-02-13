@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 10px solid black;
+    margin: 20px;
+    background-color: lightblue;
+}
+
+#box2 {
+    background-color: lightcoral;
+}
