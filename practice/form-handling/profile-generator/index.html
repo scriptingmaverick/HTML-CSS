@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Form</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <form action="/generate-profile" method="post">
+      <div>
+        <label for="name">Name: </label><input type="text" name="name" id="name" required>
+      </div>
+      <div>
+        <label for="email">Email: </label><input type="email" name="email" id="email" required>
+      </div>
+      <div>
+        <label for="dob">DOB: </label><input type="date" name="dob" id="dob">
+      </div>
+      <div>
+        <label for="gender">Gender: </label>
+        <input type="radio" name="gender" value="male" id="gender">male
+        <input type="radio" name="gender" value="female" id="female"> female
+      </div>
+      <div>
+        <label for="username">Username: </label>
+        <input type="text" name="username" id="username">
+      </div>
+      <div>
+        <label for="hobbies">Hobbies: </label>
+        <input type="checkbox" name="hobbies" value="studying" id="studying">studying
+        <input type="checkbox" name="hobbies" value="listening to music" id="listening to music">listening to music
+        <input type="checkbox" name="hobbies" value="watching movies" id="watching movies">watching movies
+        <input type="checkbox" name="hobbies" value="drawing" id="drawing">drawing
+        <input type="checkbox" name="hobbies" value="playing" id="playing">playing
+      </div>
+      <div>
+        <label for="study">Currently Studying</label>
+        <select name="study" id="study">
+          <option selected disabled>select you education level</option>
+          <option value="middle">Middle school</option>
+          <option value="10">10th standard</option>
+          <option value="occasional">Occasional</option>
+          <option value="diploma">Diploma</option>
+          <option value="graduate">Graduate</option>
+          <option value="post-graduate">Post-Graduate</option>
+        </select>
+      </div>
+      
+    </form>
+  </section>
+</body>
+
+</html>

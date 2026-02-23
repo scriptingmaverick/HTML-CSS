@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form handling</title>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      gap: 1em;
+      font-size: larger;
+    }
+
+    button {
+      width: 30%;
+      font-size: larger;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>Form</h1>
+    <form action="/greet" method="post">
+      <div>
+        <label for="name">Name: </label><input type="text" name="username" id="name">
+      </div>
+      <div>
+        <label for="email">Email: </label><input type="text" name="email" id="email">
+      </div>
+      <button>submit</button>
+    </form>
+  </section>
+</body>
+
+</html>
