@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body>section {
+  width: 70%;
+  height: 80%;
+  background-color: aqua;
+  display: grid;
+  grid-template: "header header header"
+    "desc desc profile"
+    "desc desc profile";
+  gap: 1em;
+}
+
+section>header,
+section>article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section>header {
+  grid-area: header;
+  background-color: rebeccapurple;
+}
+
+section>#details {
+  grid-area: desc;
+  background-color: bisque;
+}
+
+section>#person {
+  grid-area: profile;
+  background-color: yellowgreen;
+}
+
+#person figure {
+  width: 40%;
+  height: 45%;
+  border: 2px solid;
+}
+
+#person figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
