@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Stop watch</title>
+</head>
+
+<body>
+
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+  <button id="reset">reset</button>
+  <div id="timer"></div>
+  <script>
+    const start = document.getElementById('start');
+    const stopper = document.getElementById('stop');;
+    const reset = document.getElementById('reset')
+    const timer = document.getElementById('timer')
+    let ms = 0
+
+    let intervalID;
+    start.onclick = () => {
+      clearInterval(intervalID)
+      intervalID = createTimer()
+    }
+
+    stopper.onclick = () => clearInterval(intervalID);
+
+    reset.onclick = () => {
+      ms = 0
+      formatTimeAndPrint(ms);
+      stopper.click()
+    }
+
+    const createTimer = () => setInterval(() => {
+      ms += 1;
+      formatTimeAndPrint(ms)
+    }, 1)
+
+    const formatTimeAndPrint = (ms) => {
+      const time = (ms / 100).toFixed(3);
+      const [seconds, millis] = time.split('.')
+      timer.innerText = `${seconds}: ${millis}`
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>D O M</title>
+  <style>
+    body {
+      transition: all 1s ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="change-bg">Change BG Color Randomly</button>
+  <script>
+    const colors = ['red', 'yellow', 'orange', 'blue', 'green', 'gold', 'aliceblue', 'pink', 'black']
+    const btn = document.getElementById('change-bg');
+    const body = document.querySelector('body')
+    btn.onclick = function () {
+      const color1 = colors[Math.round(Math.random() * colors.length - 1)];
+      const color2 = colors[Math.round(Math.random() * colors.length - 1)];
+      const color3 = colors[Math.round(Math.random() * colors.length - 1)];
+
+      body.style.background = `linear-gradient(to left,${color1},${color2},${color3})`;
+    } 
+  </script>
+</body>
+
+</html>

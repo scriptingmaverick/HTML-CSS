@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dom Bubbles</title>
+</head>
+
+<body>
+  <div id="div"><button id="btn">click</button></div>
+  <script>
+    let actual
+    const div = document.getElementById('div')
+    const btn = document.getElementById('btn');
+
+    btn.onclick = (e) => {
+      actual = e
+    }
+
+    div.onclick = (e) => {
+      console.log(actual === e)
+    }
+  </script>
+</body>
+
+</html>
