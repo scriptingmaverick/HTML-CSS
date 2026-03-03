@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>progress bar</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    #parent {
+      width: 200px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: gray;
+      position: relative;
+      margin: 2em;
+    }
+
+    #child {
+      position: absolute;
+      height: 100%;
+      background-color: aqua;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="parent">
+    <p id="child"></p>
+  </div>
+  <script type="module" src="./progressbar.js"></script>
+</body>
+
+</html>
